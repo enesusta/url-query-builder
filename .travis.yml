@@ -1,0 +1,24 @@
+sudo: required
+language: node_js
+node_js:
+  - 11
+
+branches:
+  except:
+    - develop
+    - /^feature/\d+\.\d+$/
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm update
+
+install:
+  - npm install
+
+script:
+  - yarn coveralls

@@ -1,6 +1,6 @@
 function UrlQueryBuilder(entry) {
     this.entry = entry;
-};
+}
 
 UrlQueryBuilder.prototype.build = function () {
     return '?' + Object.entries(this.entry)
