@@ -1,0 +1,48 @@
+{
+  "name": "@enesusta/url-query-builder",
+  "version": "1.0.0",
+  "description": "url-query-builder builds a URL query with objects instead of the key-value model.",
+  "author": "Enes Usta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enesusta/url-query-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enesusta/url-query-builder/issues"
+  },
+  "homepage": "https://github.com/enesusta/url-query-builder#readme",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "yarn clean && rollup -c",
+    "start": "rollup -c -w",
+    "prepare": "yarn run build",
+    "test": "jest",
+    "cov": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@types/jest": "^26.0.9",
+    "coveralls": "^3.1.0",
+    "jest": "^26.4.0",
+    "rollup": "^2.23.1",
+    "rollup-plugin-terser": "^6.1.0"
+  },
+  "keywords": [
+    "url",
+    "builder",
+    "query"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
